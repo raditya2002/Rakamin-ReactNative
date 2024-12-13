@@ -223,7 +223,7 @@ export default function App() {
           <View style={styles.historyDetails}>
             <Text style={styles.historyName}>Adityo Gizwanda</Text>
             <Text style={styles.historyType}>Topup</Text>
-            <Text style={styles.historyDate}>08 December 2024</Text>
+            <Text style={styles.historyDate}>25 December 2024</Text>
           </View>
           <Text style={styles.historyAmountPositive}>+ 75.000,00</Text>
         </View>
