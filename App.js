@@ -197,17 +197,19 @@ export default function App() {
 
       {/* Account Info Section */}
       <View style={styles.accountCard}>
-        <View style={styles.balanceInfo}>
-          <Text style={styles.balanceLabel}>Balance</Text>
-          <Text style={styles.balanceAmount}>Rp 10.000.000</Text>
-        </View>
-        <View style={styles.actionsContainer}>
-          <TouchableOpacity style={styles.actionButton}>
-            <Text style={styles.actionButtonText}>+</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.actionButton}>
-            <Text style={styles.actionButtonText}>-</Text>
-          </TouchableOpacity>
+        <View style={styles.balanceRow}>
+          <View style={styles.balanceInfo}>
+            <Text style={styles.balanceLabel}>Balance</Text>
+            <Text style={styles.balanceAmount}>Rp 10.000.000</Text>
+          </View>
+          <View style={styles.actionsContainer}>
+            <TouchableOpacity style={styles.actionButtonPlus}>
+              <Text style={styles.actionButtonText}>+</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.actionButtonMinus}>
+              <Text style={styles.actionButtonText}>-</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
 
@@ -222,7 +224,6 @@ export default function App() {
           </View>
           <Text style={styles.historyAmountNegative}>- 75.000,00</Text>
         </View>
-
         <View style={styles.historyItem}>
           <View style={styles.historyDetails}>
             <Text style={styles.historyName}>Adityo Gizwanda</Text>
@@ -230,6 +231,14 @@ export default function App() {
             <Text style={styles.historyDate}>25 December 2024</Text>
           </View>
           <Text style={styles.historyAmountPositive}>+ 75.000,00</Text>
+        </View>
+        <View style={styles.historyItem}>
+          <View style={styles.historyDetails}>
+            <Text style={styles.historyName}>Adityo Gizwanda</Text>
+            <Text style={styles.historyType}>Transfer</Text>
+            <Text style={styles.historyDate}>08 December 2024</Text>
+          </View>
+          <Text style={styles.historyAmountNegative}>- 75.000,00</Text>
         </View>
       </View>
     </SafeAreaView>
@@ -252,7 +261,7 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     shadowColor: "#000",
     shadowOpacity: 0.15,
-    shadowRadius: 3,
+    shadowRadius: 3.8,
   },
   profileImage: {
     width: 50,
@@ -302,15 +311,15 @@ const styles = StyleSheet.create({
   },
   accountCard: {
     padding: 20,
-    backgroundColor: "#ffff",
+    backgroundColor: "#fff",
     borderRadius: 10,
-    marginBottom: 20,
     shadowColor: "#000",
-    shadowOpacity: 0.15,
-    shadowRadius: 3,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    elevation: 3,
     marginBottom: 20,
-    marginLeft: 15,
-    marginRight: 15,
+    marginHorizontal: 15,
   },
 
   accountNoCard: {
@@ -321,7 +330,6 @@ const styles = StyleSheet.create({
     marginLeft: 15,
     marginRight: 15,
   },
-
   accountInfo: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -341,28 +349,48 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     marginBottom: 20,
+    flex: 1,
+  },
+  balanceRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   balanceLabel: {
-    fontSize: 14,
-    color: "#666",
+    fontSize: 16,
+    color: "#555",
+    marginBottom: 5,
   },
   balanceAmount: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "bold",
     color: "#333",
+    lineHeight: 20,
+    paddingLeft: 10,
   },
   actionsContainer: {
     flexDirection: "row",
+    flexDirection: "column",
     justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: -10,
   },
-  actionButton: {
+  actionButtonPlus: {
     width: 40,
     height: 40,
     borderRadius: 20,
     backgroundColor: "#19918F",
     justifyContent: "center",
     alignItems: "center",
-    marginLeft: 10,
+    marginBottom: 10,
+  },
+  actionButtonMinus: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: "#19918F",
+    justifyContent: "center",
+    alignItems: "center",
   },
   actionButtonText: {
     color: "white",
