@@ -167,7 +167,7 @@ export default function App() {
           style={styles.profileImage}
         />
         <View style={styles.profileInfo}>
-          <Text style={styles.profileName}>Chelsea Immanuela</Text>
+          <Text style={styles.profileName}>Ahmad Raditya</Text>
           <Text style={styles.profileType}>Personal Account</Text>
         </View>
         <Image source={require("./assets/icon.png")} style={styles.sunIcon} />
@@ -176,7 +176,7 @@ export default function App() {
       {/* Greeting Section */}
       <View style={styles.greetingCard}>
         <View style={styles.textContainer}>
-          <Text style={styles.greeting}>Good Morning, Chelsea</Text>
+          <Text style={styles.greeting}>Good Morning, Tyo</Text>
           <Text style={styles.description}>
             Check all your incoming and outgoing transactions here
           </Text>
@@ -187,12 +187,16 @@ export default function App() {
         />
       </View>
 
-      {/* Account Info Section */}
-      <View style={styles.accountCard}>
+      {/* Acclunt No */}
+      <View style={styles.accountNoCard}>
         <View style={styles.accountInfo}>
           <Text style={styles.accountLabel}>Account No.</Text>
           <Text style={styles.accountNumber}>100899</Text>
         </View>
+      </View>
+
+      {/* Account Info Section */}
+      <View style={styles.accountCard}>
         <View style={styles.balanceInfo}>
           <Text style={styles.balanceLabel}>Balance</Text>
           <Text style={styles.balanceAmount}>Rp 10.000.000</Text>
@@ -236,14 +240,19 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#f8f9fa",
     paddingHorizontal: 20,
   },
   header: {
+    backgroundColor: "#ffff",
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 20,
     marginBottom: 30,
+    paddingHorizontal: 10,
+    paddingVertical: 20,
+    shadowColor: "#000",
+    shadowOpacity: 0.15,
+    shadowRadius: 3,
   },
   profileImage: {
     width: 50,
@@ -293,10 +302,26 @@ const styles = StyleSheet.create({
   },
   accountCard: {
     padding: 20,
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#ffff",
     borderRadius: 10,
     marginBottom: 20,
+    shadowColor: "#000",
+    shadowOpacity: 0.15,
+    shadowRadius: 3,
+    marginBottom: 20,
+    marginLeft: 15,
+    marginRight: 15,
   },
+
+  accountNoCard: {
+    padding: 20,
+    backgroundColor: "#19918F",
+    borderRadius: 10,
+    marginBottom: 20,
+    marginLeft: 15,
+    marginRight: 15,
+  },
+
   accountInfo: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -304,12 +329,12 @@ const styles = StyleSheet.create({
   },
   accountLabel: {
     fontSize: 14,
-    color: "#666",
+    color: "#ffff",
   },
   accountNumber: {
     fontSize: 16,
     fontWeight: "bold",
-    color: "#333",
+    color: "#ffff",
   },
   balanceInfo: {
     flexDirection: "row",
@@ -334,7 +359,7 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: "#00aaff",
+    backgroundColor: "#19918F",
     justifyContent: "center",
     alignItems: "center",
     marginLeft: 10,
@@ -346,8 +371,15 @@ const styles = StyleSheet.create({
   },
   historyCard: {
     padding: 20,
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#ffff",
     borderRadius: 10,
+    marginBottom: 20,
+    shadowColor: "#000",
+    shadowOpacity: 0.15,
+    shadowRadius: 3,
+    marginBottom: 20,
+    marginLeft: 15,
+    marginRight: 15,
   },
   historyTitle: {
     fontSize: 16,
@@ -359,6 +391,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     marginBottom: 15,
+    shadowColor: "#000",
+    shadowOpacity: 0.15,
+    shadowRadius: 3,
   },
   historyDetails: {
     flex: 1,
