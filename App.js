@@ -24,7 +24,7 @@ export default function App() {
           style={styles.profileImage}
         />
         <View style={styles.profileInfo}>
-          <Text style={styles.profileName}>Ahmad Raditya</Text>
+          <Text style={styles.profileName}>Ahmad Raditya Alrazi Wibowo</Text>
           <Text style={styles.profileType}>Personal Account</Text>
         </View>
         <Image source={require("./assets/icon.png")} style={styles.sunIcon} />
